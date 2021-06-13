@@ -42,3 +42,12 @@ def target_search(tee_ny, rand_x_start, rand_x_fin, rand_y_start, rand_y_fin):
     x, y = random_search(tee_ny, x - 50, x + 50, y - 50, y + 50)
     x, y = narrow_search(tee_ny, x - 5, x + 6, y - 5, y + 6)
     return x, y
+
+#random search of narrowing windows
+#search
+def narrowing_search():
+    x, y = random_search(tee_ny, rand_x_start, rand_x_fin, rand_y_start, rand_y_fin, 100)
+    x, y = random_search(tee_ny, x - 100, x + 100, y - 100, y + 100, 100)
+    x, y = random_search(tee_ny, x - 50, x + 50, y - 50, y + 50, 100)
+    x, y = narrow_search(tee_ny, x - 5, x + 6, y - 5, y + 6)
+    return x, y
