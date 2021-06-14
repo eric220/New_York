@@ -25,3 +25,5 @@ def get_pred(t_img):
     t_test = np.expand_dims(t_test, axis=0)
     t_test = preprocess_input(t_test)
     return model.predict(t_test)
+
+model = get_model()
