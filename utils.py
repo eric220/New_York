@@ -17,7 +17,7 @@ def return_xy(randx, randy, idx):
     
 #slices image 
 def get_img_slice(t_img, x, y, model_width):
-    t_array = t_img[y + half_est_location: y + model_width + est_location - half_est_location, x + half_est_location: x + model_width + est_location - half_est_location, :]
+    t_array = t_img[y: y + model_width, x: x + model_width, :]
     return t_array
 
 #middle pixel in, returns starting and ending slice points
